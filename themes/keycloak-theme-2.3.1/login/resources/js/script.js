@@ -19,12 +19,6 @@ function getParameterByName(name, url) {
 
 
 window.addEventListener("load", function(event) {
-
-    //change favicon
-    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.href = '/auth/resources/1g3j8/login/web-client1/img/ceiia-favicon.ico';
-    document.getElementsByTagName('head')[0].appendChild(link);
-
     var clientId = getParameterByName('client_id');
     var title = document.getElementById('kc-header-wrapper');
     title.innerHTML = "Hello " + clientId;
@@ -35,4 +29,7 @@ window.addEventListener("load", function(event) {
     lnk.rel='stylesheet';
     document.getElementsByTagName('head')[0].appendChild(lnk);
 
+    //$('head:first').append('<link rel="stylesheet" type="text/css" href="stylefacebook.css" />');
+
+    console.log( "pim: " + lnk.href);
  });
